@@ -1,0 +1,208 @@
+<div id="covpage" ng-controller="CovoiturageService" class="ng-scope">
+    <div class="title">
+        BOUGER, ça crée des liens...
+        <img src="images/demo/testimonial-thumbnails/testimonial-thumbnail-01.png" id="imagecov" >
+
+    </div>
+
+    <!---------------------- Begin Zonerecherche-------------------------------------->
+    <div class="col-md-12" id="zonecherche">
+        <div class="row">
+            <div class="col-lg-2">
+                <select class="form-control" id="input"  ng-model="typeAnnan" ng-options="item as item.typeannonce for item in TypeAnnan" >
+                    <option value="" selected>Tous les annonces</option>
+
+                </select>
+            </div>
+            <div class="col-lg-3">
+                <input id="depart" type="text"  name="depart.ville" placeholder="Depart">
+            </div>
+            <div class="col-lg-3">
+                <input id="arrivee" type="text"   name="arrivee.ville" placeholder="Arrivee">
+            </div>
+            <div class="col-lg-3">
+                <input  id="heuredate" name="date" placeholder="HEURE ET DATE"  type="text"  ng-model="dateHeureDepart" class="form-control">
+            </div>
+            <div class="col-lg-1">
+                <button type="button" class="btn btn-primary" id="recherche" ng-click="search()"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+            </div>
+
+        </div>
+
+        <!--<a href="#publier">publier</a>-->
+    </div>
+
+    <!---------------------- Ends Zonerecherche-------------------------------------->
+
+
+    <!---------------------- Begin BoxContainer-------------------------------------->
+
+    <div  id="detail">
+        <div class="Row">
+            <!--------div profile ------->
+            <div class="col-xs-3">
+              <div class="profile">
+                  <a href="#detail">
+                      <img src="images/demo/menu-thumbnails/menu-item-thumbnail-01.jpg"  class="img-circle"/>
+                  </a>
+                  <h3 class="name">Chawki Gasmi</h3>
+                  <div class="age">19 ans</div>
+                  <div class="profession">Etudiant</div>
+
+                  <br />
+                  <div class="note">4.4 - 16 avis</div>
+                  <div class="friends">291 amis </div>
+                  <div class="ico"  >ico</div>
+                  loisirs : footbal,voyage
+                  <div class="like"  >licke</div>
+                  <div class="like"  >dislicke</div>
+                  Nembre des palces restants
+                  <div>1/4</div>
+
+
+              </div>
+            </div>
+            <!--------Fin div profile ------->
+            <!--------div decription et commentaire et msg ------->
+            <div class="col-xs-9">
+
+               <div class="departArivee" >
+              <h3>  tunis --> sousse 11h Mercerdi 12.12.2015</h3>
+               </div>
+                <div class="desc">
+                    <div class="row">
+                        <div class="col-lg-9">
+                            Bonjour ;
+                            J'ai des places de Tunis (Technopole Ghazela- ESPRIT) Vers Sousse(Sahloul)
+                            Départ 12.30hr..! J'ai des places de.
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="prixETplace">
+                                <div class="prix">8 DT</div>
+                                <div class="place">par place</div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <div class="msg">
+
+                        <div id="tabs" ng-controller="TabsCtrl">
+                            <ul>
+                                <li ng-repeat="tab in tabs"
+                                    ng-class="{active:isActiveTab(tab.url)}"
+                                    ng-click="onClickTab(tab)">{{tab.title}}</li>
+                            </ul>
+                            <div id="mainView" >
+                                <div ng-include="currentTab"></div>
+                            </div>
+                        </div>
+                        <script type="text/ng-template" id="msg" >
+                            <div id="viewOne">
+                                <div class="commenter">
+                                    <div class="row">
+                                        <div class="col-lg-2" id="photo">
+                                            <img src="images/demo/menu-thumbnails/menu-item-thumbnail-01.jpg"  class="img-circle"/>
+
+                                        </div>
+                                        <div class="col-lg-10" id="inputCom">
+                                            <textarea class="form-control" placeholder="commenter ici">
+
+                                            </textarea>
+                                        </div>
+
+
+                                    </div>
+                                    <hr>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-2" id="photoCov">
+                                            <img src="images/demo/menu-thumbnails/menu-item-thumbnail-01.jpg"  class="img-circle"/>
+
+                                        </div>
+                                        <div class="col-lg-10" >
+                                            hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhdschsdchsdc
+                                            sfdshcdhcfdh
+                                        </div>
+
+
+                                    </div>
+                                    <hr>
+                                <div class="row">
+                                    <div class="col-lg-2" id="photoCov">
+                                        <img src="images/demo/menu-thumbnails/menu-item-thumbnail-01.jpg"  class="img-circle"/>
+
+                                    </div>
+                                    <div class="col-lg-10" >
+                                        hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhdschsdchsdc
+                                        sfdshcdhcfdh
+                                    </div>
+
+
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-lg-2" id="photoCov">
+                                        <img src="images/demo/menu-thumbnails/menu-item-thumbnail-01.jpg"  class="img-circle"/>
+
+                                    </div>
+                                    <div class="col-lg-10" >
+                                        hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhdschsdchsdc
+                                        sfdshcdhcfdh
+                                    </div>
+
+
+                                </div>
+                                <hr>
+
+
+                            </div>
+                        </script>
+
+                        <script type="text/ng-template" id="commentaire">
+                            <div id="viewTwo">
+                                <h1>View Two</h1>
+                                <p>Curabitur vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante, ac egestas est urna sit amet arcu. Class aptent taciti sociosqu.</p>
+                            </div>
+                        </script>
+
+
+                </div>
+                <div class="btReserver">
+                    <select class="btRes">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                    </select>
+                    <input type="submit" class="btRes"  value="reservation">
+                </div>
+            <!--------Fin div decription et commentaire et msg ------->
+        </div>
+    </div>
+
+    <!----------------------------- Ends BoxContainer----------------------->
+    </div>
+</div>
+<script>
+    $( document ).ready(function() {
+        jQuery('#heuredate').datetimepicker();
+        $("#depart").placecomplete({
+            width: "100%",
+
+
+
+        });
+
+
+        $("#arrivee").placecomplete({
+            width: "100%",
+
+        });
+
+    });
+
+
+</script>

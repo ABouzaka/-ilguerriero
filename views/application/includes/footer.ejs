@@ -1,0 +1,69 @@
+<script src="javascripts/jquery-1.11.3.min.js"></script>
+<script src="javascripts/angular.min.js"></script>
+<script src="javascripts/angular-route.min.js"></script>
+<script src="javascripts/bootstrap.min.js"></script>
+<!-- Google Maps API -->
+<script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places"></script>
+
+<!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHUY1jHjg_H3AKVCNySXkQ8pSQWCRza-g"></script>-->
+
+
+<script src="javascripts/request.js"></script>
+<!----Google map -------------------------------------------------->
+
+<script src="javascripts/lib/ng-map.min.js"></script>
+<script src="javascripts/lib/markerclusterer.js"></script>
+<script src="javascripts/Ctrl/app.js"></script>
+<script src="javascripts/Ctrl/Myroute.js"></script>
+<script src="javascripts/Ctrl/map.js"></script>
+
+<script src="javascripts/lib/jquery.datetimepicker.full.min.js"></script>
+
+<script src="javascripts/Ctrl/webService/covoiturage.js"></script>
+<script src="javascripts/lib/jquery.placecomplete.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/select2/3.4.1/select2.min.js"></script>
+<script src="javascripts/Ctrl/Ctrllogin.js" ></script>
+<script>
+
+    $(".covoiturage").click(function(){
+        $(".covoiturage").css("background-color","#FFA500");
+        $(".location").css("background-color","");
+        $(".SOS").css("background-color","");
+        $(".achat").css("background-color","");
+        $(".map_container").css("border-color", "#FFA500");
+
+
+    })
+
+    $(".location").click(function(){
+        $(".location").css("background-color","#7ABC3F");
+        $(".achat").css("background-color","");
+        $(".covoiturage").css("background-color","");
+        $(".SOS").css("background-color","");
+        $(".map_container").css("border-color", "#7ABC3F");
+    })
+    $(".achat").click(function(){
+        $(".achat").css("background-color","#00C7F8");
+        $(".SOS").css("background-color","");
+        $(".covoiturage").css("background-color","");
+        $(".location").css("background-color","");
+        $(".map_container").css("border-color", "#00C7F8");
+    })
+    $(".SOS").click(function(){
+        $(".SOS").css("background-color","#EE5455");
+        $(".covoiturage").css("background-color","");
+        $(".location").css("background-color","");
+        $(".achat").css("background-color","");
+        $(".map_container").css("border-color", "#EE5455");
+    })
+
+
+
+
+
+
+
+
+
+
+</script>

@@ -1,0 +1,312 @@
+<!---------------------- Begin covpage-------------------------------------->
+<div id="covpage" ng-controller="CovoiturageService">
+    <div class="title">
+        BOUGER, ça crée des liens...
+        <img src="images/demo/testimonial-thumbnails/testimonial-thumbnail-01.png" id="imagecov" >
+
+    </div>
+
+    <!---------------------- Begin Zonerecherche-------------------------------------->
+    <div class="col-md-12" id="zonecherche">
+        <div class="row">
+            <div class="col-lg-2">
+                <select class="form-control" id="input"  ng-model="typeAnnan" ng-options="item as item.typeannonce for item in TypeAnnan" >
+                    <option value="" selected>Tous les annonces</option>
+
+                </select>
+            </div>
+            <div class="col-lg-3">
+                <input id="depart" type="text"  name="depart.ville" placeholder="Depart">
+            </div>
+            <div class="col-lg-3">
+                <input id="arrivee" type="text"   name="arrivee.ville" placeholder="Arrivee">
+            </div>
+            <div class="col-lg-3">
+                <input  id="heuredate" name="date" placeholder="HEURE ET DATE"  type="text"  ng-model="dateHeureDepart" class="form-control">
+            </div>
+            <div class="col-lg-1">
+                <button type="button" class="btn btn-primary" id="recherche" ng-click="search()"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+            </div>
+
+        </div>
+
+        <!--<a href="#publier">publier</a>-->
+    </div>
+
+    <!---------------------- Ends Zonerecherche-------------------------------------->
+
+
+    <!---------------------- Begin BoxContainer-------------------------------------->
+
+    <div class="boxsContainer">
+        <!--------------------------------------------Box1 begins------------------------------------------------>
+        <a href="#detail">
+                <div class="myBox" >
+            <div class="Box" >
+                <div class="leftPart" >
+
+
+                        <img src="images/demo/menu-thumbnails/menu-item-thumbnail-01.jpg"  class="img-circle"/>
+
+                    <h3 class="name">Chawki Gasmi</h3>
+                    <div class="age">19 ans</div>
+                    <div class="profession">Etudiant</div>
+
+                    <br />
+                    <div class="note">4.4 - 16 avis</div>
+                    <div class="friends">291 amis </div>
+                    <div class="ico"  >ico</div>
+
+                </div>
+
+
+                <div class="MiddlePart">
+                    <h3 class="jour">Aujourd'hui à 15h</h3>
+                    <div class="departarivee">Tunis <span class="arrow-ie">→</span> Sousse</div>
+                    <div class="description"> Bonsoir! J'ai des places de Tunis (Technopole Ghazela- ESPRIT) Vers Sousse(Sahloul)
+                        Départ 12.30hr..! J'ai des places de.
+                    </div>
+                    <div class="vehicule"> Véhicule:FORD FIESTA</div>
+                </div>
+                <div class="RightPart">
+                    <div class="prixETplace">
+                        <div class="prix">8 DT</div>
+                        <div class="place">par place</div>
+                    </div>
+
+                    <div class="bottom">
+                        <div class="place">Complet</div>
+                        <div class="accepter">Acceptation: </div>
+                        <div class="Acceptation"><b>Automatique </b></div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        </a>
+        <!--------------------------------------------Box1 Ends------------------------------------------------>
+
+
+
+        <!--------------------------------------------Box2 begins------------------------------------------------>
+        <div class="myBox">
+            <div class="Box" >
+                <div class="leftPart" >
+
+                    <a href="#">
+                        <img src="images/demo/menu-thumbnails/menu-item-thumbnail-01.jpg"  class="img-circle"/>
+                    </a>
+                    <h3 class="name">Haytham chaouachi</h3>
+                    <div class="age">19 ans</div>
+                    <div class="profession">Etudiant</div>
+
+
+                    <div class="note">4.4 - 16 avis</div>
+                    <div class="friends">291 amis </div>
+                    <div class="ico"  >ico</div>
+
+                </div>
+
+
+                <div class="MiddlePart">
+                    <h3 class="jour">Aujourd'hui à 15h</h3>
+                    <div class="departarivee">Tunis -> Sousse</div>
+                    <div class="description"> Bonsoir! J'ai des places de Tunis (Technopole Ghazela- ESPRIT) Vers Sousse(Sahloul)
+                        Départ 12.30hr..! J'ai des places de.
+                    </div>
+                    <div class="vehicule"> Véhicule:FORD FIESTA</div>
+                </div>
+                <div class="RightPart">
+                    <div class="prixETplace">
+                        <div class="prix">8 DT</div>
+                        <div class="place">par place</div>
+                    </div>
+
+                    <div class="bottom">
+                        <div class="place">Complet</div>
+                        <div class="accepter">Acceptation: </div>
+                        <div class="Acceptation"><b>Automatique </b></div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <!--------------------------------------------Box2 Ends------------------------------------------------>
+
+
+        <!--------------------------------------------Box3 begins------------------------------------------------>
+        <div class="myBox">
+            <div class="Box" >
+                <div class="leftPart" >
+
+                    <a href="#">
+                        <img src="images/demo/menu-thumbnails/menu-item-thumbnail-01.jpg"  class="img-circle"/>
+                    </a>
+                    <h3 class="name">Haytham chaouachi</h3>
+
+
+                        <div class="age">19 ans</div>
+                        <div class="profession">Etudiant</div>
+
+
+
+                    <div class="note">4.4 - 16 avis</div>
+                    <div class="friends">291 amis </div>
+                    <div class="ico"  >ico</div>
+
+                </div>
+
+
+                <div class="MiddlePart">
+                    <h3 class="jour">Aujourd'hui à 15h</h3>
+                    <div class="departarivee">Tunis -> Sousse</div>
+                    <div class="description"> Bonsoir! J'ai des places de Tunis (Technopole Ghazela- ESPRIT) Vers Sousse(Sahloul)
+                        Départ 12.30hr..! J'ai des places de.
+                    </div>
+                    Véhicule:<span class="vehicule"> FORD FIESTA</span>
+                </div>
+                <div class="RightPart">
+                    <div class="prixETplace">
+                        <div class="prix">8 DT</div>
+                        <div class="place">par place</div>
+                    </div>
+
+                    <div class="bottom">
+                        <div class="place">Complet</div>
+                        <div class="accepter">Acceptation: </div>
+                        <div class="Acceptation"><b>Automatique </b></div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <!--------------------------------------------Box3 Ends------------------------------------------------>
+
+        <!--------------------------------------------Box4 begins------------------------------------------------>
+        <div class="myBox">
+            <div class="Box" >
+                <div class="leftPart" >
+
+                    <a href="#">
+                        <img src="images/demo/menu-thumbnails/menu-item-thumbnail-01.jpg"  class="img-circle"/>
+                    </a>
+                    <h3 class="name">Haytham chaouachi</h3>
+
+
+                    <div class="age">19 ans</div>
+                    <div class="profession">Etudiant</div>
+
+
+
+                    <div class="note">4.4 - 16 avis</div>
+                    <div class="friends">291 amis </div>
+                    <div class="ico"  >ico</div>
+
+                </div>
+
+
+                <div class="MiddlePart">
+                    <h3 class="jour">Aujourd'hui à 15h</h3>
+                    <div class="departarivee">Tunis -> Sousse</div>
+                    <div class="description"> Bonsoir! J'ai des places de Tunis (Technopole Ghazela- ESPRIT) Vers Sousse(Sahloul)
+                        Départ 12.30hr..! J'ai des places de.
+                    </div>
+                    Véhicule:<span class="vehicule"> FORD FIESTA</span>
+                </div>
+                <div class="RightPart">
+                    <div class="prixETplace">
+                        <div class="prix">8 DT</div>
+                        <div class="place">par place</div>
+                    </div>
+
+                    <div class="bottom">
+                        <div class="place">Complet</div>
+                        <div class="accepter">Acceptation: </div>
+                        <div class="Acceptation"><b>Automatique </b></div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <!--------------------------------------------Box4 Ends------------------------------------------------>
+
+        <!--------------------------------------------Box5 begins------------------------------------------------>
+        <div class="myBox">
+            <div class="Box" >
+                <div class="leftPart" >
+
+                    <a href="#">
+                        <img src="images/demo/menu-thumbnails/menu-item-thumbnail-01.jpg"  class="img-circle"/>
+                    </a>
+                    <h3 class="name">Haytham chaouachi</h3>
+
+
+                    <div class="age">19 ans</div>
+                    <div class="profession">Etudiant</div>
+
+
+
+                    <div class="note">4.4 - 16 avis</div>
+                    <div class="friends">291 amis </div>
+                    <div class="ico"  >ico</div>
+
+                </div>
+
+
+                <div class="MiddlePart">
+                    <h3 class="jour">Aujourd'hui à 15h</h3>
+                    <div class="departarivee">Tunis -> Sousse</div>
+                    <div class="description"> Bonsoir! J'ai des places de Tunis (Technopole Ghazela- ESPRIT) Vers Sousse(Sahloul)
+                        Départ 12.30hr..! J'ai des places de.
+                    </div>
+                    Véhicule:<span class="vehicule"> FORD FIESTA</span>
+                </div>
+                <div class="RightPart">
+                    <div class="prixETplace">
+                        <div class="prix">8 DT</div>
+                        <div class="place">par place</div>
+                    </div>
+
+                    <div class="bottom">
+                        <div class="place">Complet</div>
+                        <div class="accepter">Acceptation: </div>
+                        <div class="Acceptation"><b>Automatique </b></div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <!--------------------------------------------Box5 Ends------------------------------------------------>
+
+    </div>
+
+    <!----------------------------- Ends BoxContainer----------------------->
+
+</div>
+
+<!---------------------- Ends covpage-------------------------------------->
+<script>
+    $( document ).ready(function() {
+        jQuery('#heuredate').datetimepicker();
+        $("#depart").placecomplete({
+            width: "100%",
+
+
+
+        });
+
+
+        $("#arrivee").placecomplete({
+            width: "100%",
+
+        });
+
+    });
+
+
+</script>

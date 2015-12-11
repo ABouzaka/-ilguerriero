@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MyApp">
+<head>
+    <!-- START Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <!-- END Meta -->
+    <title> Coxino.com</title>
+    <% include application/includes/head.ejs %>
+</head>
+<body ng-controller="mapController as vm">
+
+
+
+
+<div class="container-fluid">
+    <!---------Row 1 Begins------------------------------>
+    <header ><% include application/includes/header.ejs %> </header>
+    <!------------Row 1 Ends---------------------->
+
+
+    <!---------------------Row 2  Begins----------------------------->
+    <div class="row"  >
+
+        <!-------------Row 2-Col1 Begins-------------------------->
+        <div class="col-xs-12 col-sm-9 col-md-7">
+
+
+
+            <div ng-view></div>
+
+        </div>
+        <!--------------Row 2-Col1 Ends-------------------------->
+
+        <!-------------Row 2-Col2 Begins-------------------------->
+
+        <div class="col-xs-12 col-sm-9 col-md-5" >
+
+            <div  class="map_container" >
+
+
+                <ng-map  zoom="7" center="[34.96528, 9.44961]" style="display: block; height: 100%; width: 100%; border-radius: 10px;" >
+                    <directions
+                            draggable="true"
+                            panel="directions-panel"
+                            travel-mode="DRIVING"
+                            origin="{{vm.Dep}}"
+                            destination="{{vm.Arr}}">
+
+                    </directions>
+
+
+                    <custom-marker position="[{{p[0]}}, {{p[1]}}]" ng-repeat="p in vm.positions">
+
+                        <div class="cm">
+
+                            <img src="/images/assets/o115.png">
+                        </div>
+                    </custom-marker>
+                </ng-map>
+            </div>
+        </div>
+        <!--------------Row 2-Co2 Ends-------------------------->
+    </div>
+    <!---------------------Row 2  Ends----------------------------->
+
+</div><!--container-fluid-->
+
+
+
+<!-- START Site Footer -->
+<footer >
+
+    <% include application/includes/footer.ejs %>
+</footer>
+<!-- END Site Footer -->
+
+
+
+
+</body>
+</html>

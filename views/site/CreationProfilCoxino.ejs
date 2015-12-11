@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title of the document</title>
+</head>
+<body>
+<% if ( typeof(message) != "undefined" ){%>
+        <%= message %>
+<% }%>
+
+<form action="/CreationProfilCoxino" method="post">
+    <label>
+        <input name="sexe" value="Home" type="radio"  />
+        Home
+    </label>
+
+    <label>
+        <input name="sexe" value="Femme"  type="radio" />
+        Femme
+    </label><br />
+
+    <input name="prenom"     type="text"   placeholder="Prénom" /><br />
+    <input name="nom"        type="text"    placeholder="Nom" /><br />
+
+    <input name="email"      type="email"    placeholder="Email" /><br />
+
+    <input name="motdePasse" type="password"    placeholder="Mot de passe" /><br />
+
+    <input name="ConfmotdePasse" type="password"    placeholder="Confirmer mode de passe" /><br />
+
+    <input type="submit" value="Valider" />
+</form>
+
+</body>
+
+</html>

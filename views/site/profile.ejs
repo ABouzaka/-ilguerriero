@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title> Coxino</title>
+</head>
+<body>
+    <h1>Profil de l'utilisateur</h1>
+    <a href="/logout">logout</a>  <br />
+
+    <!--Access to document field stored in session-->
+    <% if( typeof(user.local) != "undefined"){%>
+        <strong>id</strong>: <%= user._id %><br />
+        <strong>MotdePasse</strong>: <%= user.local.motdePasse %><br />
+
+        <strong>Email</strong>: <%= user.local.email %><br />
+        <strong>Nom</strong>: <%= user.local.nom %><br />
+        <strong>Prénom</strong>: <%= user.local.prenom %><br />
+        <strong>Sexe </strong>: <%= user.local.sexe %><br />
+    <% } %>
+
+    <% if( typeof(user.facebook) != "undefined"){%>
+        <strong>id</strong>: <%= user._id %><br />
+        <strong>token</strong>: <%= user.facebook.token %><br />
+        <strong>Email</strong>: <%= user.facebook.email %><br />
+        <strong>Display Name</strong>: <%= user.facebook.displayName %> <br />
+        <strong>Sexe </strong>: <%= user.facebook.sexe %><br>
+    <% } %>
+</body>
+</html>

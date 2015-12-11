@@ -1,0 +1,110 @@
+
+<div id="covpage" ng-controller="publierService">
+    <div class="title">
+        BOUGER, ça crée des liens...
+        <img src="images/demo/testimonial-thumbnails/testimonial-thumbnail-01.png" id="imagecov">
+    </div>
+
+
+<div class="boxsContainer">
+    <div  id="zone">
+        <div class="row">
+            <div class="col-lg-3">
+                <select class="form-control" id="input"  ng-model="typeAnnan" ng-options="item as item.typeannonce for item in TypeAnnan" >
+                    <option value="" selected>Tous les annonces</option>
+
+                </select>
+            </div>
+            <div class="col-lg-3">
+                <input id="depart" type="text"  name="depart.ville" ng-model="trajet.depart.ville" >
+            </div>
+            <div class="col-lg-3">
+                <input id="arrivee" type="text"   name="arrivee.ville" placeholder="ARRIVEE" ng-model="trajet.arrivee.ville">
+            </div>
+            <div class="col-lg-3">
+                <input id="input" type="Number" class="form-control" ng-model="trajet.placeAnnonce" name="placeAnnonce" placeholder="NBR RESERVATION">
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+    <div  id="zone">
+        <div class="row">
+            <div class="col-lg-3">
+                <input  id="heuredate" name="date" placeholder="HEURE ET DATE"  type="text"  ng-model="trajet.dateHeureDepart" class="form-control">
+            </div>
+            <div class="col-lg-3">
+                <input id="input" type="text" class="form-control" ng-model="trajet.prix" name="prix" placeholder="prix">
+            </div>
+            <div class="col-lg-3">
+                <input id="input" type="text" class="form-control"  name="marque" placeholder="Véhicule marque">
+            </div>
+            <div class="col-lg-3">
+                <input id="input" type="text" class="form-control"  name="couleur" placeholder="COULEUR">
+            </div>
+
+
+        </div>
+
+    </div>
+    <div  id="zoneicon">
+        <div class="row">
+            <div class="col-lg-3">
+
+                INFO SUP<span id="bar"> |</span>
+
+            </div>
+            <div class="col-lg-9">
+
+                    fumer<input type="checkbox"  name="fumer" ng-model="trajet.informationSup.fumer" >
+                    musique<input type="checkbox" name="musique"  ng-model="trajet.informationSup.musique" >
+                    bagage<input type="checkbox" name="bagage"  ng-model="trajet.informationSup.bagage" >
+                    climatisé<input type="checkbox" name="climatise"  ng-model="trajet.informationSup.climatise" >
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-5">
+            <div  id="txtzone">
+                DESCRIPTION
+            </div>
+
+        </div>
+        <div class="col-lg-7">
+            <textarea cols="30" rows="3" id="txt" ng-model="trajet.description" class="form-control"></textarea>
+
+        </div>
+    </div>
+    <div>
+    <input id="btnvalider" type="submit" ng-click="publier()" class="form-control" value=">>>VALIDER">
+</div>
+
+</div>
+</div>
+
+<script>
+    $( document ).ready(function() {
+        jQuery('#heuredate').datetimepicker();
+        $("#depart").placecomplete({
+            width: "100%",
+
+
+
+        });
+
+
+        $("#arrivee").placecomplete({
+            width: "100%",
+
+        });
+
+    });
+
+
+</script>

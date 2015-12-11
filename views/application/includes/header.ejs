@@ -1,0 +1,204 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+
+    <!---------------- mobile menu Begins-------------------------------------------------------------->
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#Menu-RightPart" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand"href="#"style="padding: 0px;margin:0px;margin-right:10px;">
+            <!-- put your logo here -->
+            <img id="logo" alt="Brand"src="images/assets/logo2.png" /><!--logo.PNG  -->
+        </a>
+    </div>
+    <!---------------- mobile menu Ends-------------------------------------------------------------->
+
+    <!-- Menu in Right part------------------------------------------------>
+    <div class="collapse navbar-collapse navbar-right" id="Menu-RightPart">
+        <ul class="nav navbar-nav "  >
+            <!-- 3rd menu item =  Drop Down Menu -->
+            <li class="dropdown">
+                <a href="#covoiturage"class="dropdown-toggle covoiturage menuitem" data-toggle="dropdown">COVOITURAGE</a>
+
+            </li>
+            <!-- END  3rd menu item-->
+
+
+            <li class="dropdown">
+                <a href="#location"class="dropdown-toggle location menuitem" data-toggle="dropdown">CO-LOCATION</a>
+
+            </li>
+
+            <li class="dropdown">
+                <a href="#achat"class="dropdown-toggle achat menuitem" data-toggle="dropdown">ACHAT VENTE</a>
+
+            </li>
+            <li class="dropdown">
+                <a href="#SOS"class="dropdown-toggle SOS menuitem" data-toggle="dropdown">SOS SERVICES</a>
+
+            </li>
+
+
+            <li id="Conx">
+         <button type="button" class="btn btn-info btn-lg"  id="btnCon"  data-toggle="modal" data-target="#myModal">
+             <span class="glyphicon glyphicon-user"></span>
+             connexion
+         </button>
+               <!-- <button data-toggle="modal" id="btsCon"  href="#" data-target="#myModal">connexion</button>----->
+
+            </li>
+            <li id="publier">
+                <a  href="#publier" type="button" class="btn btn-info btn-lg"  id="btnpub">
+                    <span class="glyphicon glyphicon-send"></span>
+                    Publier
+                </a>
+
+            </li>
+
+        </ul>
+
+    </div><!-- /.navbar-collapse -->
+    <!-- Menu in Right part------------------------------------------------>
+
+</nav>
+<div class="modal fade" id="myModal" role="dialog" >
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Merci de vous authentifier</h4>
+            </div>
+            <div class="modal-body">
+                <ul class="nav nav-tabs">
+                    <li><a data-toggle="tab" href="#Connexion">Connexion</a></li>
+                    <li><a data-toggle="tab" href="#Inscription">Inscription</a></li>
+                </ul>
+                <div class="tab-content">
+
+                    <div id="Connexion" class="tab-pane fade form-horizontal in active" ng-controller="AppCtrlConx">
+                        <form name="myform">
+                            <br>
+                            <font color="red">   {{message}}</font>
+                            <br>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="email">Email:</label>
+                                <div class="col-sm-10">
+                                    <input type="email" ng-model="user.email" name="email" class="form-control" id="email" placeholder="Enter email" required>
+
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="pwd">Password:</label>
+                                <div class="col-sm-10">
+                                    <input type="password" ng-model="user.motdePasse" name="motdePasse" class="form-control" id="pwd" placeholder="Enter password" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <div class="checkbox">
+                                        <label><input type="checkbox"> Remember me</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <button type="submit" class="btn btn-default" ng-click="connexion()">Connexion</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!---------login form  ends--------------------------------->
+                    <div id="Inscription" class="tab-pane fade form-horizontal" ng-controller="AppCtrlInscrip">
+                        <form name="myform">
+                            <br>
+                            <font color="red">   {{message}}</font>
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="prenom">Prénom:</label>
+                                <div class="col-sm-10">
+                                    <input type="text" name="prenom" ng-model="user.prenom" class="form-control" id="prenom" placeholder="Enter prenom" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="nom">Nom:</label>
+                                <div class="col-sm-10">
+                                    <input type="text" name="nom" ng-model="user.nom" class="form-control" id="nom" placeholder="Enter nom" required>
+                                </div>
+                            </div>
+
+
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="email">Email:</label>
+                                <div class="col-sm-10">
+                                    <input type="email" name="email" ng-model="user.email" class="form-control" id="email" placeholder="Enter email" required>
+                                </div>
+                            </div>
+
+                            <div class="fieldset form-group" ng-class="{'has-error':user.motdePasse.$invalid && !user.motdePasse.$pristine}">
+
+                                <label class="control-label col-sm-2" for="pwd">Password:</label>
+                                <div class="col-sm-10">
+                                    <input type="password" ng-model="user.motdePasse" name="motdePasse" class="form-control" ng-minlength="8" ng-maxlength="20" ng-pattern="/(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z])/" id="pwd" placeholder="Enter password" required>
+                                    <p ng-show="myform.motdePasse.$error.minlength" class="error">
+                                        8 caractères minimum et 20 caractères maximum
+                                    </p>
+                                    <p ng-show="myform.motdePasse.$error.pattern" class="error">
+                                        différencie majuscules et minuscules</p>
+                                </div>
+                            </div>
+                            <div class="fieldset form-group" ng-class="{'has-error':user.password_c.$invalid && !user.password_c.$pristine}">
+                                <label class="control-label col-sm-2" for="password_c">Confirm Password:</label>
+                                <div class="col-sm-10">
+                                    <input type="password" id="password_c" name="password_c" ng-model="user.password_c" placeholder="confirm password" valid-password-c="user.motdePasse" class="form-control" required />
+
+                                    <p ng-show="myform.password_c.$error.noMatch" class="error">Passwords do not match.</p>
+
+                                </div>
+
+                            </div>
+
+                            <div class="form-group">
+
+
+                                <label class="control-label col-sm-2" for="sexe">Sexe:</label>
+                                <label class="control-label col-sm-2" for="homme"><input  type="radio" name="sexe" ng-model="user.sexe" value="Home"><b>Home</b></label>
+                                <label class="control-label col-sm-2" for="femme"><input type="radio" name="sexe" ng-model="user.sexe" value="Femme"><b>Femme</b></label>
+                            </div>
+
+
+                            <div class="form-group" >
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <button id="inscri" type="submit" class="btn btn-block btn-default" ng-click="Inscription()">Inscription</button>
+
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <a class="btn btn-block btn-social btn-facebook" href="/auth/facebook">
+                                        <span class="fa fa-facebook"></span> S'inscrire avec votre compte Facebook
+
+                                    </a>
+
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+
+    </div>
+</div>
+
+

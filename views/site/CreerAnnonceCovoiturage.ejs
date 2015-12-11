@@ -1,0 +1,77 @@
+<!DOCTYPE html >
+<!-- 1-specify the module that current page will work with -->
+<html ng-app="MyApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+      <!-- 2-create the Controller scope-->
+      <div ng-controller="AppCtrl">
+          <!-- 3-store use data in the model -->
+        Point de départ :    <input type="text" ng-model="covoiturage.PointDepart"  /> <br />
+        Point de d'arrivée : <input type="text" ng-model="covoiturage.PotinArrivee" /><br />
+
+        Date et heure  :     <input type="DATE" ng-model="covoiturage.DateEtHeure" />
+        <select  ng-model="covoiturage.Heure" >
+            <option value="" selected="selected">hh</option>
+            <option value="0">00</option>
+            <option value="1">01</option>
+            <option value="2">02</option>
+            <option value="3">03</option>
+            <option value="4">04</option>
+            <option value="5">05</option>
+            <option value="6">06</option>
+            <option value="7">07</option>
+            <option value="8">08</option>
+            <option value="9">09</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+        </select>
+
+        <select ng-model="covoiturage.Minute">
+            <option value="" selected="selected">mm</option>
+            <option value="0">00</option>
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="30">30</option>
+            <option value="40">40</option>
+            <option value="50">50</option>
+        </select><br />
+
+        Prix           :     <input type="text" ng-model="covoiturage.Prix" /> DTN<br />
+        Nombre de places :   <input type="text" ng-model="covoiturage.NombrePlaces" /><br />
+
+        Vous pouvez ajouter plus de détails sur votre trajet: <textarea rows="3" cols="40"  ng-model="covoiturage.detailTrajet" ></textarea>
+        <br />
+
+        <label><input type="checkbox"  name="" />Espace non-fumeur </label> <br />
+        <label><input type="checkbox" name=""/>Grand badge </label><br />
+        <label><input type="checkbox" name=""/>Air climatisé</label><br />
+        <label>
+            <input type="checkbox" name=""/>
+            Je certifie être en possession d'un permis de conduire et d'une assurance en cours de validité
+        </label><br />
+
+        <input type="submit" value="Publier" ng-click="addDocument()">
+      </div>
+
+    <% include include %>
+</body>
+</html>
+
+
+
+
